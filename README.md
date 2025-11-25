@@ -23,8 +23,9 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-module.py
 ```
+module.py
+
 from django.db import models
 from django.contrib import admin
 class car(models.Model):
@@ -35,13 +36,20 @@ class car(models.Model):
 
 class  carAdmin (admin.ModelAdmin):
     list_display = ('owner', 'make', 'model', 'year') 
-
+```
 ```
 admin.py
-```
 
-## OUTPUT 
-ORM/iORM/image.pngmage.png
+from django.contrib import admin
+
+from .models import car,carAdmin
+admin.site.register(car,carAdmin)
+
+
+```
+##OUTPUT
+
+![alt text](<Screenshot 2025-11-24 141728.png>)
 
 
 ## RESULT
